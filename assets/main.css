@@ -39,7 +39,10 @@ aside p{
 }
 main{
     color: white;
-    margin-top: 5%;
+    margin: 5% 0%;
+    border-bottom: 1px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to right,#f8790b,#6b04e0 );
 }
 .digit{
     text-transform: uppercase;
@@ -53,7 +56,7 @@ main{
     display:flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 5%;
+    margin: 5% 0%;
 }
 .card{
     padding: 0% 4%;
@@ -69,6 +72,42 @@ main{
     text-transform: capitalize;
     background:linear-gradient(to right, #f8790b,#6b04e0);
     -webkit-text-fill-color: transparent;
+    background-clip: border-box;
     -webkit-background-clip:text;
     
+}
+/************tablet break point*************/
+@media screen and (max-width: 768px) {
+    #hamburger{
+        padding: 5% 3%;
+        text-align: right;
+        display: block;
+    }
+    .intro{
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .item{
+        flex-wrap: wrap;
+    }
+    .card{
+        flex-basis: 40%;
+        margin-bottom: 5%;
+    }
+    .help{
+        margin-bottom: 8%;
+    }
+}
+@media screen and (max-width: 480px){
+    .item{
+     flex-direction: column;
+     justify-content: space-between;
+     flex-wrap: nowrap;
+    }
+    .card{
+        flex-basis: 100%;
+    }
+    .help{
+        text-align: left;
+    }
 }
