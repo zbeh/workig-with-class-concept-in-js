@@ -7,6 +7,31 @@ body{
     width: 80%;
     margin: 0% auto;
 }
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8%;
+}
+#logo{
+    font-size: 1.3rem;
+    background:linear-gradient(to right, #f8790b,#6b04e0);
+    -webkit-text-fill-color: transparent;
+    background-clip: border-box;
+    -webkit-background-clip:text;
+}
+a{
+    text-decoration: none;
+    text-transform: capitalize;
+    color: white;
+    font-size: .9rem;
+}
+ #home{
+    padding-bottom: 1%;
+    border-bottom: 1px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to right,#f8790b,#6b04e0 );
+}
 
 #hamburger{
     display: none;
@@ -78,6 +103,9 @@ main{
 }
 /************tablet break point*************/
 @media screen and (max-width: 768px) {
+    nav{
+        display: none;
+    }
     #hamburger{
         padding: 5% 3%;
         text-align: right;
